@@ -23,4 +23,10 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+find_package(soem REQUIRED)
+message("soem_INCLUDE_DIRS: ${soem_INCLUDE_DIRS}")
+
+find_library(soem_LIB NAMES soem)
+message("soem_LIB: ${soem_LIB}")
+
 ament_package()
